@@ -1,0 +1,13 @@
+import numpy as np
+from sklearn import linear_model
+class MarketingCosts:
+@staticmethod
+def desired_marketing_expenditure(marketing_expenditure, units_sold, desired_units_sold):
+    units_sold = np.array(unit_sold).reshape(-1,1)
+    lm = linear_model.TheilSenRegressor(max_subpopulation = 10)
+    lm_fit(units_sold, marketing_expenditure)
+    return lm.predict(desired_units_sold)
+print(MarketingCost.desired_marketing_expenditure(
+     [300000,200000,400000,300000,100000],
+     [60000,50000,90000,80000,30000],
+     60000))
