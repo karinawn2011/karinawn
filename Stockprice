@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 class StockPrices:
 @staticmethod
-def most_corr(prices)
+def most_corr(prices):
     prices = pd.DataFrame(prices)
     cor = prices.pct_change().corr().unstack()
     cor = cor[cor!=1].sort_values(ascending=False, kind='quicksort')
@@ -29,4 +29,4 @@ prices = {
         110.14,107.66,108.08,109.90
    ]
 }
-print (StockPrices.most_corr(prices))
+print(StockPrices.most_corr(prices))
